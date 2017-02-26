@@ -44,6 +44,10 @@ graphql_object!(<'a> SchemaType<'a>: SchemaType<'a> as "__Schema" |&self| {
         self.mutation_type()
     }
 
+    field subscriptionType() -> Option<TypeType> {
+        None // TODO
+    }
+
     field directives() -> Vec<&DirectiveType> {
         self.directive_list()
     }
